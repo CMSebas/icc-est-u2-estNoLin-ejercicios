@@ -4,8 +4,11 @@ import main.Materia.Models.Node;
 
 public class InsertBST {
     public Node insert(Node node, int value) {
-        if (node == null)
-            return new Node(value);
+        if (node == null){
+            Node newNode = new Node(value);
+            return newNode;
+
+        }
 
         if (value < node.getValue())
             node.setLeft(insert(node.getLeft(), value));
