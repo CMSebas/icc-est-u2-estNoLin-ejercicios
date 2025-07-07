@@ -61,6 +61,16 @@ src/
 
 Carpeta: `Ejercicio_01_insert`
 Implementa un algoritmo para insertar nodos en un Árbol Binario de Búsqueda.
+Explicacion:Si node es null, se crea un nuevo Node con el valor dado.
+
+Si el valor es menor, se inserta recursivamente en el hijo izquierdo.
+
+Si es mayor, en el hijo derecho.
+
+No se permiten valores duplicados.
+
+Este algoritmo garantiza que el árbol mantenga la propiedad BST: todos los nodos a la izquierda son menores y a la derecha mayores.
+
 
  **Input de ejemplo:** `[5, 3, 7, 2, 4, 6, 8]`
  **Output esperado:**
@@ -77,6 +87,18 @@ Implementa un algoritmo para insertar nodos en un Árbol Binario de Búsqueda.
 
 📂 Carpeta: `Ejercicio_02_invert`
 Dada la raíz de un árbol binario, el algoritmo devuelve su versión invertida (espejo).
+Explicacion:
+Crea una pila (Stack) y añade la raíz.
+
+Mientras la pila no esté vacía:
+
+Extrae un nodo.
+
+Intercambia sus hijos izquierdo y derecho.
+
+Agrega los hijos (si existen) a la pila para seguir procesando.
+
+Cuando termina, todos los nodos han sido invertidos.
 
  **Input de ejemplo:**
 
@@ -100,6 +122,20 @@ Dada la raíz de un árbol binario, el algoritmo devuelve su versión invertida 
 
 📂 Carpeta: `Ejercicio_03_listLeves`
 Devuelve una lista enlazada con los nodos por nivel. Si hay N niveles, se obtienen N listas.
+Explicacion:
+Si el árbol está vacío, retorna una lista vacía.
+
+Utiliza una Queue para procesar los nodos por nivel.
+
+Por cada nivel:
+
+Calcula cuántos nodos tiene.
+
+Los extrae uno por uno de la cola.
+
+Guarda todos los nodos de ese nivel en una List<Node>.
+
+Agrega esta sublista al resultado general (List<List Node>).
 
  **Input de ejemplo:**
 
@@ -123,6 +159,14 @@ Devuelve una lista enlazada con los nodos por nivel. Si hay N niveles, se obtien
 
 Carpeta: `Ejercicio_04_depth`
 Calcula la profundidad máxima de un árbol binario (la longitud del camino más largo desde la raíz hasta una hoja).
+Explicacion:
+Si el nodo es null, retorna 0.
+
+Calcula recursivamente la profundidad del subárbol izquierdo y derecho.
+
+Devuelve el máximo de ambas profundidades más uno (el nivel actual).
+
+Este método es eficiente y recorre cada nodo solo una vez.
 
 **Input de ejemplo:**
 
