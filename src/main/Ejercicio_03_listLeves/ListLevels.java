@@ -7,8 +7,8 @@ import java.util.Queue;
 import main.Materia.Models.Node;
 
 public class ListLevels {
-     public List<LinkedList<Node>> obtenerNiveles(Node root) {
-        List<LinkedList<Node>> response = new ArrayList<>();
+    public List<List<Node>> listLevels(Node root) {
+        List<List<Node>> response = new ArrayList<>();
 
         if (root == null) {
             return response;
@@ -19,7 +19,7 @@ public class ListLevels {
 
         while (!cola.isEmpty()) {
             int tamañoNivel = cola.size();
-            LinkedList<Node> nivel = new LinkedList<>();
+            List<Node> nivel = new ArrayList<>();
 
             for (int i = 0; i < tamañoNivel; i++) {
                 Node actual = cola.poll();

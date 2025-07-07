@@ -66,11 +66,11 @@ public class App {
         root3.getRight().setRight(new Node(9));
 
         ListLevels listar = new ListLevels();
-        List<LinkedList<Node>> niveles = listar.obtenerNiveles(root3);
+        List<List<Node>> niveles = listar.listLevels(root3);
 
         
         int nivel = 0;
-        for (LinkedList<Node> lista : niveles) {
+        for (List<Node> lista : niveles) {
             System.out.print("Nivel " + nivel + ": ");
             for (Node n : lista) {
                 System.out.print(n.getValue() + " ");
