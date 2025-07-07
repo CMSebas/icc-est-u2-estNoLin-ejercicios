@@ -17,7 +17,7 @@ public class App {
         // NO MODIFICAR HASTA AQUÍ
 
 
-        System.out.println("Ejercicio 01: Insertar en un Árbol Binario de Búsqueda (BST)");
+        
         int[] valoresEj1 = {5, 3, 7, 2, 4, 6, 8};
         InsertBST insertador = new InsertBST();
         Node raizEj1 = null;
